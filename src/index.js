@@ -48,7 +48,8 @@ export const objectEntries = (object) => {
  * @returns {number[]}
  */
 export const divisibleBy = (array, number) => {
-  return array.filter((num) => num % number === 0);
+  const value = array.every((num) => typeof num === 'number');
+  return array.filter((num) => value === true && num % number === 0); 
 };
 
 /**
